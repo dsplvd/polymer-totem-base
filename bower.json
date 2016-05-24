@@ -1,0 +1,24 @@
+{
+  "name": "polymer-totem-builder",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "d-sepulveda <d@splvd.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/dsplvd/polymer-totem-base",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "^1.4.0",
+    "iscroll": "^5.2.0",
+    "velocity": "^1.2.3"
+  }
+}
