@@ -1,0 +1,57 @@
+<link rel="import" href="../../polymer/polymer.html">
+<dom-module id="app-base">
+  <style>
+    * {
+      cursor:none;
+      -webkit-user-select:none;
+      -webkit-user-drag:none;
+      outline: none;
+      user-drag: none;
+      font-family: OpenSansRegular;
+    }
+    #container {
+      width: 1080px;
+      height:1920px;
+      position: absolute;
+      top:0;
+      left:0;
+    }
+  </style>
+  <template>
+    <div id="container">
+    </div>
+  </template>
+</dom-module>
+<script>
+  'use strict';
+  class AppBase {
+    constructor () {
+      Polymer(AppBase.prototype);
+    }
+    get is () {
+      return 'app-base';
+    }
+    created () {
+      window.AppBase = this;
+      console.log("app-base loaded");
+    }
+    ready () {
+      if (typeof(global) != 'undefined'){
+        //launcher code
+      }
+      this.containerDiv = this.$$('#container');
+    }
+    fadeIn () {
+      Velocity(this.$$('#container'), { opacity: 1, zIndex: 10 }, {duration:1000, display: 'auto', complete: () => {
+        if (callback) callback();
+      }});
+    }
+    fadeOut () {
+      Velocity(this.$$('#container'), { opacity: 0, zIndex: -1 }, { duration:1000, display: 'none', complete: () => {
+        if (callback) callback();
+      }});
+    }
+
+  }
+  new AppBase();  
+</script>

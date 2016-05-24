@@ -1,0 +1,29 @@
+$screenwidth:1080px;
+$screenheight:1920px;
+
+@import 'opensans';
+
+* {
+	cursor:none;
+	-webkit-user-select:none;
+	-webkit-user-drag:none;
+	outline: none;
+	user-drag: none;
+}
+
+html {
+	margin:0;
+	padding:0;
+	width:$screenwidth;
+	height:$screenheight;
+	overflow: hidden;	
+}
+
+body {
+	margin:0;
+	padding:0;
+	width:$screenwidth;
+	height:$screenheight;
+	overflow: hidden;
+}
+
